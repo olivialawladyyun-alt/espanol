@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Hola! 西语启航 — 零基础西班牙语学习</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#e63946">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="西语启航">
+  <link rel="apple-touch-icon" href="icon-180.png">
+</head>
+<body>
+  <header>
+    <div class="logo">🇪🇸 ¡Hola! 西语启航<small>零基础西班牙语学习</small></div>
+    <div class="stats">
+      <span class="stat-pill" id="stat-day">📅 第 1 天</span>
+      <span class="stat-pill" id="stat-streak">🔥 0 天</span>
+      <span class="stat-pill" id="stat-xp">⭐ 0 XP</span>
+      <span class="stat-pill" id="stat-coins">🪙 0</span>
+      <span class="stat-pill" id="stat-level">Lv.1 启程小白</span>
+    </div>
+  </header>
+
+  <nav>
+    <button data-tab="home" class="active">🏠 首页</button>
+    <button data-tab="pron">🗣️ 发音</button>
+    <button data-tab="vocab">🃏 词汇</button>
+    <button data-tab="grammar">📖 语法</button>
+    <button data-tab="tense">⏳ 时态</button>
+    <button data-tab="sentence">🧱 句型</button>
+    <button data-tab="speak">🎤 口语</button>
+    <button data-tab="listen">👂 听力</button>
+    <button data-tab="read">📰 阅读</button>
+    <button data-tab="write">✍️ 写作</button>
+    <button data-tab="review">🗃️ 记忆库</button>
+    <button data-tab="pet">🐾 宠物</button>
+    <button data-tab="ach">🏆 成就</button>
+  </nav>
+
+  <main>
+    <section class="tab active" id="tab-home"></section>
+    <section class="tab" id="tab-pron"></section>
+    <section class="tab" id="tab-vocab"></section>
+    <section class="tab" id="tab-grammar"></section>
+    <section class="tab" id="tab-tense"></section>
+    <section class="tab" id="tab-sentence"></section>
+    <section class="tab" id="tab-speak"></section>
+    <section class="tab" id="tab-listen"></section>
+    <section class="tab" id="tab-read"></section>
+    <section class="tab" id="tab-write"></section>
+    <section class="tab" id="tab-review"></section>
+    <section class="tab" id="tab-pet"></section>
+    <section class="tab" id="tab-ach"></section>
+  </main>
+
+  <div id="toasts"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/data2.js"></script>
+  <script src="js/data3.js"></script>
+  <script src="js/data4.js"></script>
+  <script src="js/data5.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
