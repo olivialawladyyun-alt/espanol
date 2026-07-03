@@ -1831,7 +1831,7 @@ function renderRead() {
   el.innerHTML = `
     <div class="card">
       <h2>📰 阅读训练（已读 ${(state.readingsDone || []).length}/${READINGS.length} 篇）</h2>
-      <p class="muted">分级短文，配理解题和生词表；生词可点击听发音。读完做对全部理解题 +12 XP。</p>
+      <p class="muted">配合《现代西班牙语》一~三册课文主题与语法进度编写的<b>原创短文</b>（非教材原文），配理解题和生词表；生词可点击听发音。读完做对全部理解题 +12 XP。</p>
     </div>
     ${[1, 2, 3].map(b => byBook[b] ? `
       <div class="card" style="padding:12px 18px;margin-bottom:10px">
@@ -1843,6 +1843,7 @@ function renderRead() {
             <div class="ic">📖</div>
             <div class="nm">${esc(r.title)}</div>
             <div class="muted">${esc(r.titleZh)}</div>
+            ${r.align ? `<div class="muted" style="font-size:0.72rem;margin-top:4px;line-height:1.4">${esc(r.align)}</div>` : ''}
             ${(state.readingsDone || []).includes(r.id) ? '<div class="done-mark" style="margin-top:6px">✅ 已完成</div>' : ''}
           </div>`).join('')}
       </div>` : '').join('')}`;
@@ -1864,6 +1865,7 @@ function renderReadingDetail() {
     <div class="card">
       <h2>${esc(r.title)} <span class="muted" style="font-weight:400;font-size:0.9rem">${esc(r.titleZh)}</span>
         <button class="speak-btn" onclick="speak('${esc(r.text)}')">🔊</button></h2>
+      ${r.align ? `<p class="muted" style="font-size:0.82rem;margin-top:4px">📎 ${esc(r.align)}</p>` : ''}
       <p style="font-size:1.05rem;line-height:2;margin-top:10px">${html}</p>
       <h3>📒 生词</h3>
       ${r.glossary.map(([w, zh]) => `

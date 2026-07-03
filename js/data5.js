@@ -241,6 +241,90 @@ const READINGS = [
   },
 ];
 
+// 追加原创配套短文（贴合现西各册课文主题与语法进度，非教材原文）
+READINGS.push(
+  {
+    id: 'r7', book: 1, title: 'Me presento', titleZh: '自我介绍',
+    text: '¡Hola! Me llamo Wang Lin y soy de Pekín. Tengo diecinueve años y soy estudiante de primer año en la universidad. Estudio español porque me parece una lengua muy bonita. En mi clase somos veinte estudiantes. Mi profesora se llama Ana y es española. Es muy simpática y paciente. Todos los días tenemos dos horas de español. Aunque el español no es fácil, me gusta mucho y estudio con entusiasmo.',
+    glossary: [ ['presentarse', '自我介绍'], ['de primer año', '一年级的'], ['paciente', '有耐心的'], ['con entusiasmo', '满怀热情地'] ],
+    questions: [
+      { q: '¿Cuántos años tiene Wang Lin?', opts: ['Diecinueve', 'Veinte', 'Veintiuno'], a: 'Diecinueve' },
+      { q: '¿Por qué estudia español?', opts: ['Porque es fácil', 'Porque le parece una lengua muy bonita', 'Porque es obligatorio'], a: 'Porque le parece una lengua muy bonita' },
+      { q: '¿Cómo es la profesora?', opts: ['Simpática y paciente', 'Seria y estricta', 'Joven y tímida'], a: 'Simpática y paciente' },
+    ],
+  },
+  {
+    id: 'r8', book: 1, title: 'Nuestra facultad', titleZh: '我们的系',
+    text: 'Nuestra facultad de lenguas extranjeras es muy grande. Hay muchas aulas, una biblioteca y un laboratorio de idiomas. Los estudiantes estudiamos inglés, francés, español o alemán. Por la mañana tenemos clases y por la tarde estudiamos en la biblioteca. La biblioteca tiene muchos libros y diccionarios. A veces escuchamos audios en el laboratorio para practicar la pronunciación. Me gusta mucho mi facultad porque los profesores son buenos y los compañeros, muy amables.',
+    glossary: [ ['la facultad', '系/学院'], ['el laboratorio de idiomas', '语言实验室'], ['el audio', '录音'], ['la pronunciación', '发音'] ],
+    questions: [
+      { q: '¿Qué hay en la facultad?', opts: ['Un hospital', 'Una biblioteca y un laboratorio', 'Una piscina'], a: 'Una biblioteca y un laboratorio' },
+      { q: '¿Qué hacen por la tarde?', opts: ['Estudian en la biblioteca', 'Ven la televisión', 'Van de compras'], a: 'Estudian en la biblioteca' },
+      { q: '¿Para qué usan el laboratorio?', opts: ['Para comer', 'Para practicar la pronunciación', 'Para dormir'], a: 'Para practicar la pronunciación' },
+    ],
+  },
+  {
+    id: 'r9', book: 2, title: 'Las vacaciones de verano', titleZh: '暑假',
+    text: 'El verano pasado mi familia y yo fuimos de vacaciones a Xi\'an. Cogimos el tren por la mañana y llegamos por la tarde. Estuvimos allí una semana. Visitamos los famosos Guerreros de Terracota y comimos platos típicos de la región. Un día llovió mucho y no pudimos salir, así que nos quedamos en el hotel jugando a las cartas. A pesar de eso, lo pasamos muy bien. Cuando volvimos a casa, estábamos cansados pero muy contentos.',
+    glossary: [ ['ir de vacaciones', '去度假'], ['coger el tren', '坐火车'], ['los Guerreros de Terracota', '兵马俑'], ['a pesar de', '尽管' ] ],
+    questions: [
+      { q: '¿Adónde fueron de vacaciones?', opts: ['A Pekín', 'A Xi\'an', 'A Shanghái'], a: 'A Xi\'an' },
+      { q: '¿Qué visitaron?', opts: ['Los Guerreros de Terracota', 'La Gran Muralla', 'Un museo de arte'], a: 'Los Guerreros de Terracota' },
+      { q: '¿Qué hicieron el día que llovió?', opts: ['Salieron igualmente', 'Se quedaron en el hotel jugando a las cartas', 'Volvieron a casa'], a: 'Se quedaron en el hotel jugando a las cartas' },
+    ],
+  },
+  {
+    id: 'r10', book: 2, title: 'Una fiesta de cumpleaños', titleZh: '生日聚会',
+    text: 'Ayer fue el cumpleaños de mi amiga Marta y organizamos una fiesta sorpresa. Preparamos la comida, compramos un pastel y decoramos el salón con globos. Cuando Marta llegó, todos gritamos «¡Sorpresa!» y ella se puso muy contenta. Comimos, bailamos y cantamos hasta muy tarde. Cada uno le regaló algo. Yo le regalé un libro porque sé que le encanta leer. Fue una noche inolvidable y Marta nos dio las gracias a todos.',
+    glossary: [ ['la fiesta sorpresa', '惊喜派对'], ['el pastel', '蛋糕'], ['decorar', '装饰'], ['inolvidable', '难忘的'] ],
+    questions: [
+      { q: '¿Qué tipo de fiesta organizaron?', opts: ['Una fiesta sorpresa', 'Una boda', 'Una cena formal'], a: 'Una fiesta sorpresa' },
+      { q: '¿Qué le regaló el narrador a Marta?', opts: ['Un libro', 'Flores', 'Un pastel'], a: 'Un libro' },
+      { q: '¿Cómo fue la noche?', opts: ['Aburrida', 'Inolvidable', 'Muy corta'], a: 'Inolvidable' },
+    ],
+  },
+  {
+    id: 'r11', book: 3, title: 'La tecnología en nuestra vida', titleZh: '科技与生活',
+    text: 'Hoy en día la tecnología está presente en casi todo lo que hacemos. Gracias al teléfono móvil, podemos comunicarnos con personas de todo el mundo en pocos segundos. Internet nos permite estudiar, trabajar y comprar sin salir de casa. Sin embargo, algunos expertos creen que dependemos demasiado de las pantallas. Es importante que aprendamos a usar la tecnología con moderación y que no olvidemos hablar cara a cara con los demás. La tecnología debe ayudarnos, no controlarnos.',
+    glossary: [ ['la pantalla', '屏幕'], ['depender de', '依赖'], ['con moderación', '适度地'], ['cara a cara', '面对面'] ],
+    questions: [
+      { q: '¿Qué nos permite hacer Internet?', opts: ['Estudiar, trabajar y comprar desde casa', 'Solo jugar', 'Nada útil'], a: 'Estudiar, trabajar y comprar desde casa' },
+      { q: '¿Qué preocupa a algunos expertos?', opts: ['Que dependemos demasiado de las pantallas', 'Que la tecnología es cara', 'Que no hay suficiente Internet'], a: 'Que dependemos demasiado de las pantallas' },
+      { q: '¿Cómo debemos usar la tecnología?', opts: ['Sin límites', 'Con moderación', 'Nunca'], a: 'Con moderación' },
+    ],
+  },
+  {
+    id: 'r12', book: 3, title: 'Estudiar en el extranjero', titleZh: '出国留学',
+    text: 'Cada año, muchos jóvenes deciden estudiar en el extranjero. Vivir en otro país no siempre es fácil: al principio uno echa de menos a su familia y tiene que acostumbrarse a una cultura diferente. Sin embargo, es una experiencia que vale la pena. Estudiando fuera, se aprende un idioma mucho más rápido y se conocen personas de todo el mundo. Además, uno se vuelve más independiente y maduro. Aunque haya dificultades, la mayoría de los estudiantes dice que volvería a hacerlo.',
+    glossary: [ ['en el extranjero', '在国外'], ['echar de menos', '想念'], ['acostumbrarse a', '适应'], ['valer la pena', '值得'] ],
+    questions: [
+      { q: '¿Qué es difícil al principio?', opts: ['Echar de menos a la familia y adaptarse', 'Aprender a comer', 'Encontrar el aeropuerto'], a: 'Echar de menos a la familia y adaptarse' },
+      { q: '¿Qué ventaja se menciona?', opts: ['Se aprende el idioma más rápido', 'Se gana mucho dinero', 'Se estudia menos'], a: 'Se aprende el idioma más rápido' },
+      { q: '¿Qué dice la mayoría de los estudiantes?', opts: ['Que no lo recomienda', 'Que volvería a hacerlo', 'Que fue un error'], a: 'Que volvería a hacerlo' },
+    ],
+  }
+);
+
+// 每篇短文对应的现西册课主题与语法练习点（原创配套，非教材原文）
+const READING_ALIGN = {
+  r7:  '现西一册·自我介绍主题 ｜ 练：ser + 职业国籍、现在时',
+  r1:  '现西一册·日常作息主题 ｜ 练：自复动词、现在时习惯',
+  r8:  '现西一册·大学与系主题 ｜ 练：hay、现在时、方位',
+  r2:  '现西一册·城市与天气主题 ｜ 练：hay/estar、hacer 天气',
+  r9:  '现西二册·假期旅行主题 ｜ 练：简单过去时叙事',
+  r3:  '现西二册·周末活动主题 ｜ 练：简单过去时 vs 过去未完成时',
+  r10: '现西二册·节日聚会主题 ｜ 练：简单过去时、间接宾语代词',
+  r4:  '现西二册·看病就医主题 ｜ 练：doler、过去时、医疗词汇',
+  r11: '现西三册·科技与社会主题 ｜ 练：虚拟式（es importante que…）',
+  r5:  '现西三册·学习语言主题 ｜ 练：无人称 se、para + 原形',
+  r12: '现西三册·留学与人生主题 ｜ 练：虚拟式让步（aunque haya…）、条件式',
+  r6:  '现西三册·环境保护主题 ｜ 练：deber、条件句、社会议题词汇',
+};
+READINGS.forEach(r => { if (READING_ALIGN[r.id]) r.align = READING_ALIGN[r.id]; });
+// 按册与主题顺序重排，阅读列表更贴合教材推进
+const READING_ORDER = ['r7', 'r1', 'r8', 'r2', 'r9', 'r3', 'r10', 'r4', 'r11', 'r5', 'r12', 'r6'];
+READINGS.sort((a, b) => READING_ORDER.indexOf(a.id) - READING_ORDER.indexOf(b.id));
+
 // ---------- #6 扩充语法题库（为各课补充题目；通关时从题池随机抽 3 道） ----------
 const EXTRA_QUIZ = {
   l1: [
