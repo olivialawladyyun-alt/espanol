@@ -366,6 +366,12 @@ textarea.essay:focus { outline: none; border-color: var(--orange); }
   animation: bob 2.4s ease-in-out infinite;
   user-select: none;
 }
+.pet-stage-view { min-height: 180px; display: flex; align-items: center; justify-content: center; }
+.pet-img {
+  width: 190px; height: 190px; object-fit: contain;
+  animation: bob 2.6s ease-in-out infinite;
+  user-select: none; -webkit-user-drag: none;
+}
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .pet-bubble {
   display: inline-block;

@@ -1924,6 +1924,31 @@ function renderReadQuiz() {
 // ============================================================
 // 宠物养成：西语小羊驼
 // ============================================================
+// 形象图片：放在 assets/pet/ 下按约定命名；缺图自动回退 emoji
+let petSide = false;         // false=正面, true=侧面
+let petAction = null;        // 'eat' | 'play' | 'pat' 互动动作临时切换
+let petActionTimer = null;
+function petImgError(img, emoji) {
+  const d = document.createElement('div');
+  d.className = 'pet-emoji';
+  d.textContent = emoji;
+  img.replaceWith(d);
+}
+function petVisual(cur) {
+  const idx = PET_STAGES.indexOf(cur) + 1;
+  let file;
+  if (petAction) file = `assets/pet/act_${petAction}.png`;
+  else file = `assets/pet/stage${idx}${petSide ? '_side' : '_front'}.png`;
+  return `<img class="pet-img" src="${file}" alt="${esc(cur.name)}" onerror="petImgError(this,'${cur.emoji}')">`;
+}
+function showPetAction(name) {
+  petAction = name;
+  renderPet();
+  clearTimeout(petActionTimer);
+  petActionTimer = setTimeout(() => { petAction = null; renderPet(); }, 1600);
+}
+function togglePetSide() { petSide = !petSide; renderPet(); }
+
 function petStage(g) {
   let cur = PET_STAGES[0], next = null;
   for (let i = 0; i < PET_STAGES.length; i++) {
@@ -1976,7 +2001,10 @@ function renderPet() {
   el.innerHTML = `
     <div class="hero">
       <div class="card" style="text-align:center">
-        <div class="pet-emoji">${cur.emoji}</div>
+        <div class="pet-stage-view">${petVisual(cur)}</div>
+        <div style="margin:4px 0">
+          <button class="btn small secondary" onclick="togglePetSide()">${petSide ? '↩️ 看正面' : '🔄 看侧面'}</button>
+        </div>
         <h2 style="margin-top:6px">${esc(p.name)} · ${cur.name}
           <button class="btn small secondary" onclick="renamePet()">✏️ 改名</button>
         </h2>
@@ -2066,7 +2094,7 @@ function useItem(id) {
   }
   checkAchievements();
   saveState();
-  renderPet();
+  showPetAction(it.type === 'snack' ? 'eat' : 'play');
 }
 
 function patPet() {
@@ -2079,7 +2107,7 @@ function patPet() {
   p.growth += 1;
   toast(`🤍 ${p.name}：Mmm… ¡qué gusto!（好舒服～）`);
   saveState();
-  renderPet();
+  showPetAction('pat');
 }
 
 function renamePet() {
