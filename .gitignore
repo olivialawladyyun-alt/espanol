@@ -1,3 +1,5 @@
 ﻿.claude/
 serve.ps1
 *.log
+assets/pet/动作.png
+assets/pet/_check*.png

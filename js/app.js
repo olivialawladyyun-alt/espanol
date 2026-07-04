@@ -1928,7 +1928,13 @@ function renderReadQuiz() {
 let petSide = false;         // false=正面, true=侧面
 let petAction = null;        // 'eat' | 'play' | 'pat' 互动动作临时切换
 let petActionTimer = null;
-function petImgError(img, emoji) {
+function petImgError(img, emoji, fallback) {
+  // 动作图缺失 → 退回阶段图；阶段图也缺失 → 退回 emoji
+  if (fallback) {
+    img.onerror = () => petImgError(img, emoji, '');
+    img.src = fallback;
+    return;
+  }
   const d = document.createElement('div');
   d.className = 'pet-emoji';
   d.textContent = emoji;
@@ -1936,10 +1942,10 @@ function petImgError(img, emoji) {
 }
 function petVisual(cur) {
   const idx = PET_STAGES.indexOf(cur) + 1;
-  let file;
-  if (petAction) file = `assets/pet/act_${petAction}.png`;
-  else file = `assets/pet/stage${idx}${petSide ? '_side' : '_front'}.png`;
-  return `<img class="pet-img" src="${file}" alt="${esc(cur.name)}" onerror="petImgError(this,'${cur.emoji}')">`;
+  const stageFile = `assets/pet/stage${idx}${petSide ? '_side' : '_front'}.png`;
+  const file = petAction ? `assets/pet/act_${petAction}.png` : stageFile;
+  const fallback = petAction ? stageFile : '';
+  return `<img class="pet-img" src="${file}" alt="${esc(cur.name)}" onerror="petImgError(this,'${cur.emoji}','${fallback}')">`;
 }
 function showPetAction(name) {
   petAction = name;
