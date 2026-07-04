@@ -366,6 +366,15 @@ function switchTab(id) {
   window.scrollTo({ top: 0 });
 }
 document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
+// 顶栏齿轮：任何页面一键进入「跨设备同步 / 设置」（在成就页底部）
+function openSettings() {
+  switchTab('ach');
+  renderAch();
+  requestAnimationFrame(() => {
+    const el = document.getElementById('sync-settings');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
 
 // ============================================================
 // 首页（每日任务 + 今日更新）
@@ -2199,7 +2208,7 @@ function renderAch() {
           </div>`).join('')}
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="sync-settings">
       <h2>☁️ 跨设备同步（iPad / 电脑 / 手机）</h2>
       <p class="muted" style="line-height:1.8">进度默认只存在本机浏览器。想在多设备联动，有两种方式：<br>
         <b>① 文件备份</b>：随时导出为文件，在另一台设备导入即可。<br>
