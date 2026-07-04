@@ -1831,11 +1831,11 @@ function renderRead() {
   el.innerHTML = `
     <div class="card">
       <h2>📰 阅读训练（已读 ${(state.readingsDone || []).length}/${READINGS.length} 篇）</h2>
-      <p class="muted">配合《现代西班牙语》一~三册课文主题与语法进度编写的<b>原创短文</b>（非教材原文），配理解题和生词表；生词可点击听发音。读完做对全部理解题 +12 XP。</p>
+      <p class="muted">配合《现代西班牙语》一~三册及<b>进阶（第四册）</b>课文主题与语法进度编写的<b>原创短文</b>（非教材原文），配理解题和生词表；生词可点击听发音。<b>进阶篇篇幅更长、语法更难（B1–C1）</b>。读完做对全部理解题 +12 XP。</p>
     </div>
-    ${[1, 2, 3].map(b => byBook[b] ? `
+    ${[1, 2, 3, 4].map(b => byBook[b] ? `
       <div class="card" style="padding:12px 18px;margin-bottom:10px">
-        <h2>${['📕 第一册','📗 第二册','📘 第三册'][b-1]}</h2>
+        <h2>${['📕 第一册','📗 第二册','📘 第三册','📙 第四册 · 进阶'][b-1]}</h2>
       </div>
       <div class="grid cols3" style="margin-bottom:16px">
         ${byBook[b].map(r => `
@@ -1849,6 +1849,13 @@ function renderRead() {
       </div>` : '').join('')}`;
 }
 function openReading(id) { readingId = id; renderReadingDetail(); }
+function toggleTransl(btn) {
+  const p = document.getElementById('read-transl');
+  if (!p) return;
+  const show = p.style.display === 'none';
+  p.style.display = show ? 'block' : 'none';
+  btn.textContent = show ? '🇨🇳 隐藏中文翻译' : '🇨🇳 显示中文翻译';
+}
 
 let readingQuiz = null;
 function renderReadingDetail() {
@@ -1867,6 +1874,9 @@ function renderReadingDetail() {
         <button class="speak-btn" onclick="speak('${esc(r.text)}')">🔊</button></h2>
       ${r.align ? `<p class="muted" style="font-size:0.82rem;margin-top:4px">📎 ${esc(r.align)}</p>` : ''}
       <p style="font-size:1.05rem;line-height:2;margin-top:10px">${html}</p>
+      ${r.textZh ? `
+        <button class="btn small secondary" style="margin-top:6px" onclick="toggleTransl(this)">🇨🇳 显示中文翻译</button>
+        <p id="read-transl" style="display:none;font-size:0.96rem;line-height:1.9;margin-top:10px;color:var(--ink);background:#faf3e6;border:1px solid var(--line);border-radius:10px;padding:12px 14px">${esc(r.textZh)}</p>` : ''}
       <h3>📒 生词</h3>
       ${r.glossary.map(([w, zh]) => `
         <div class="example-row">

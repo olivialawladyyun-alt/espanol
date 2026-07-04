@@ -305,6 +305,131 @@ READINGS.push(
   }
 );
 
+// 追加·进阶原创短文（更长、语法更难，贴合现西三~四册及 B1–C1 水平）
+READINGS.push(
+  {
+    id: 'r13', book: 3, title: 'Las redes sociales', titleZh: '社交网络',
+    text: 'Las redes sociales han cambiado por completo la manera en que nos relacionamos. Gracias a ellas, podemos mantener el contacto con amigos que viven lejos y enterarnos al instante de lo que ocurre en el mundo. No obstante, muchos expertos advierten de que un uso excesivo puede provocar ansiedad y aislamiento. Es fundamental que los jóvenes aprendan a proteger su intimidad y que no crean todo lo que leen en internet. Aunque estas plataformas ofrecen muchas ventajas, conviene recordar que la vida real sucede fuera de la pantalla. Al final, lo importante no es cuántos seguidores tengas, sino la calidad de tus relaciones.',
+    glossary: [ ['la red social', '社交网络'], ['enterarse de', '得知/了解'], ['advertir de', '提醒/警告'], ['el aislamiento', '孤立/隔绝'], ['la intimidad', '隐私'], ['el seguidor', '粉丝/关注者'] ],
+    questions: [
+      { q: '¿Qué permiten hacer las redes sociales?', opts: ['Mantener el contacto con amigos lejanos', 'Ganar dinero fácilmente', 'Aprender idiomas sin esfuerzo'], a: 'Mantener el contacto con amigos lejanos' },
+      { q: '¿De qué advierten los expertos?', opts: ['De que un uso excesivo puede causar ansiedad', 'De que son demasiado caras', 'De que funcionan mal'], a: 'De que un uso excesivo puede causar ansiedad' },
+      { q: '¿Qué es fundamental según el texto?', opts: ['Que los jóvenes protejan su intimidad', 'Que todos tengan un móvil nuevo', 'Que se publiquen muchas fotos'], a: 'Que los jóvenes protejan su intimidad' },
+      { q: 'Según el autor, ¿qué es lo más importante?', opts: ['La calidad de las relaciones', 'El número de seguidores', 'La cantidad de fotos'], a: 'La calidad de las relaciones' },
+    ],
+  },
+  {
+    id: 'r14', book: 3, title: 'El valor del tiempo libre', titleZh: '闲暇的价值',
+    text: 'En la sociedad actual, muchas personas viven con prisa y apenas encuentran un momento para descansar. Sin embargo, el tiempo libre es tan necesario como el trabajo. Dedicar unas horas a leer, pasear o practicar un pasatiempo nos ayuda a reducir el estrés y a recuperar la energía. Los psicólogos recomiendan desconectar del móvil de vez en cuando y disfrutar de actividades que nos hagan felices. No se trata de no hacer nada, sino de elegir bien en qué invertimos nuestro tiempo. Quien aprende a descansar trabaja mejor y vive con más equilibrio.',
+    glossary: [ ['con prisa', '匆忙地'], ['apenas', '几乎不'], ['el pasatiempo', '消遣/爱好'], ['el estrés', '压力'], ['desconectar', '放松/断开'], ['el equilibrio', '平衡'] ],
+    questions: [
+      { q: '¿Cómo viven muchas personas hoy en día?', opts: ['Con prisa y sin descansar', 'Con mucho tiempo libre', 'Sin trabajar nunca'], a: 'Con prisa y sin descansar' },
+      { q: '¿Para qué sirve el tiempo libre?', opts: ['Para reducir el estrés y recuperar energía', 'Para ganar más dinero', 'Para trabajar más horas'], a: 'Para reducir el estrés y recuperar energía' },
+      { q: '¿Qué recomiendan los psicólogos?', opts: ['Desconectar del móvil de vez en cuando', 'Usar más el móvil', 'No descansar nunca'], a: 'Desconectar del móvil de vez en cuando' },
+      { q: '¿Qué le pasa a quien aprende a descansar?', opts: ['Trabaja mejor y vive con más equilibrio', 'Se vuelve perezoso', 'Gana menos amigos'], a: 'Trabaja mejor y vive con más equilibrio' },
+    ],
+  },
+  {
+    id: 'r15', book: 4, title: 'La siesta española', titleZh: '西班牙的午睡',
+    text: 'La siesta es una de las costumbres más conocidas de España, aunque hoy en día no es tan común como mucha gente cree. Tradicionalmente, después de comer, los trabajadores descansaban un rato para evitar las horas de más calor, sobre todo en verano y en el sur del país. Este breve descanso, de unos veinte minutos, resultaba beneficioso para recuperar fuerzas y afrontar el resto de la jornada. Sin embargo, con el ritmo de vida moderno y los horarios laborales, cada vez menos españoles tienen la oportunidad de dormir la siesta entre semana. No obstante, algunos científicos defienden que una siesta corta mejora la memoria y la concentración. Por eso, en varios países han empezado a crear espacios para que los empleados puedan descansar durante la jornada.',
+    glossary: [ ['la costumbre', '习俗'], ['un rato', '一会儿'], ['beneficioso', '有益的'], ['afrontar', '应对/面对'], ['la jornada', '一天/工作日'], ['no obstante', '然而'] ],
+    questions: [
+      { q: '¿Para qué descansaban tradicionalmente los trabajadores?', opts: ['Para evitar las horas de más calor', 'Para trabajar por la noche', 'Para hacer deporte'], a: 'Para evitar las horas de más calor' },
+      { q: '¿Cuánto suele durar una siesta?', opts: ['Unos veinte minutos', 'Tres horas', 'Toda la tarde'], a: 'Unos veinte minutos' },
+      { q: '¿Por qué cada vez menos españoles duermen la siesta?', opts: ['Por el ritmo de vida y los horarios laborales', 'Porque ya no tienen sueño', 'Porque está prohibida'], a: 'Por el ritmo de vida y los horarios laborales' },
+      { q: '¿Qué defienden algunos científicos?', opts: ['Que una siesta corta mejora la memoria', 'Que dormir de día es malo', 'Que nadie debe descansar'], a: 'Que una siesta corta mejora la memoria' },
+    ],
+  },
+  {
+    id: 'r16', book: 4, title: 'Gabriel García Márquez', titleZh: '加西亚·马尔克斯与魔幻现实主义',
+    text: 'Gabriel García Márquez, escritor colombiano nacido en 1927, es uno de los autores más importantes de la literatura en lengua española. Su obra más famosa, Cien años de soledad, cuenta la historia de la familia Buendía a lo largo de varias generaciones en un pueblo imaginario llamado Macondo. En sus novelas, los hechos cotidianos se mezclan con elementos fantásticos de una forma tan natural que el lector los acepta sin sorprenderse. Este estilo, conocido como realismo mágico, influyó en numerosos escritores de todo el mundo. En 1982 recibió el Premio Nobel de Literatura. Aunque murió en 2014, sus libros se siguen leyendo y traduciendo a decenas de idiomas, y su nombre continúa siendo un símbolo de la cultura latinoamericana.',
+    glossary: [ ['la obra', '作品'], ['a lo largo de', '贯穿/在…期间'], ['cotidiano', '日常的'], ['mezclarse con', '与…交融'], ['el realismo mágico', '魔幻现实主义'], ['decenas de', '数十个'] ],
+    questions: [
+      { q: '¿De qué país era García Márquez?', opts: ['De Colombia', 'De España', 'De México'], a: 'De Colombia' },
+      { q: '¿Dónde transcurre Cien años de soledad?', opts: ['En un pueblo imaginario llamado Macondo', 'En Madrid', 'En Bogotá'], a: 'En un pueblo imaginario llamado Macondo' },
+      { q: '¿Qué caracteriza al realismo mágico?', opts: ['Mezclar hechos cotidianos con elementos fantásticos', 'Contar solo historias reales', 'Usar un lenguaje científico'], a: 'Mezclar hechos cotidianos con elementos fantásticos' },
+      { q: '¿Qué premio recibió en 1982?', opts: ['El Premio Nobel de Literatura', 'El Premio Cervantes', 'Un Óscar'], a: 'El Premio Nobel de Literatura' },
+    ],
+  },
+  {
+    id: 'r17', book: 4, title: 'El Camino de Santiago', titleZh: '圣地亚哥朝圣之路',
+    text: 'Cada año, miles de personas de todo el mundo recorren el Camino de Santiago, una red de rutas que terminan en la ciudad de Santiago de Compostela, en el noroeste de España. Aunque su origen es religioso, ya que durante siglos los peregrinos caminaban para visitar la tumba del apóstol Santiago, hoy la gente lo hace por motivos muy diversos. Algunos buscan una experiencia espiritual, otros quieren estar en contacto con la naturaleza o simplemente poner a prueba su resistencia física. El camino más popular, el Camino Francés, tiene unos ochocientos kilómetros y se puede completar en poco más de un mes. A lo largo del recorrido, los caminantes descubren pueblos, paisajes y una hospitalidad que difícilmente olvidarán.',
+    glossary: [ ['recorrer', '走过/走遍'], ['la ruta', '路线'], ['el peregrino', '朝圣者'], ['poner a prueba', '考验'], ['el paisaje', '风景'], ['la hospitalidad', '好客/热情'] ],
+    questions: [
+      { q: '¿Dónde terminan las rutas del Camino de Santiago?', opts: ['En Santiago de Compostela', 'En Madrid', 'En Barcelona'], a: 'En Santiago de Compostela' },
+      { q: '¿Cuál era el origen del Camino?', opts: ['Religioso', 'Deportivo', 'Comercial'], a: 'Religioso' },
+      { q: '¿Cuántos kilómetros tiene el Camino Francés?', opts: ['Unos ochocientos', 'Unos cien', 'Más de tres mil'], a: 'Unos ochocientos' },
+      { q: '¿Qué descubren los caminantes durante el recorrido?', opts: ['Pueblos, paisajes y hospitalidad', 'Grandes ciudades industriales', 'Playas tropicales'], a: 'Pueblos, paisajes y hospitalidad' },
+    ],
+  },
+  {
+    id: 'r18', book: 4, title: 'La inteligencia artificial', titleZh: '人工智能',
+    text: 'La inteligencia artificial ha dejado de ser algo propio de las películas de ciencia ficción para convertirse en una realidad de nuestra vida diaria. Hoy la utilizamos, muchas veces sin darnos cuenta, cuando un teléfono reconoce nuestra voz o cuando una aplicación nos recomienda una canción. Sus posibilidades son enormes: puede ayudar a los médicos a detectar enfermedades, mejorar la seguridad en las carreteras o facilitar la traducción entre idiomas. Sin embargo, también plantea preguntas difíciles sobre el futuro del empleo y sobre quién es responsable cuando un sistema comete un error. Por eso, muchos expertos insisten en que es necesario que exista una regulación clara y en que la tecnología se desarrolle siempre al servicio de las personas.',
+    glossary: [ ['dejar de', '不再'], ['darse cuenta de', '意识到'], ['detectar', '检测/发现'], ['plantear', '提出'], ['el empleo', '就业/工作'], ['al servicio de', '为…服务'] ],
+    questions: [
+      { q: '¿Dónde usamos la inteligencia artificial en la vida diaria?', opts: ['Cuando el teléfono reconoce nuestra voz', 'Solo en los laboratorios', 'Únicamente en las películas'], a: 'Cuando el teléfono reconoce nuestra voz' },
+      { q: '¿Qué puede hacer según el texto?', opts: ['Ayudar a detectar enfermedades', 'Sustituir a las familias', 'Eliminar todos los idiomas'], a: 'Ayudar a detectar enfermedades' },
+      { q: '¿Qué preguntas difíciles plantea?', opts: ['Sobre el empleo y la responsabilidad', 'Sobre el precio de los móviles', 'Sobre el clima'], a: 'Sobre el empleo y la responsabilidad' },
+      { q: '¿Qué piden muchos expertos?', opts: ['Que exista una regulación clara', 'Que se prohíba la tecnología', 'Que nadie la use'], a: 'Que exista una regulación clara' },
+    ],
+  },
+  {
+    id: 'r19', book: 4, title: 'La dieta mediterránea', titleZh: '地中海饮食',
+    text: 'La dieta mediterránea es mucho más que una manera de comer: es un estilo de vida reconocido por la Unesco como patrimonio cultural de la humanidad. Se basa en el consumo de productos frescos y de temporada, como frutas, verduras, legumbres, pescado y, sobre todo, aceite de oliva. La carne roja y los dulces se reservan para ocasiones especiales. Numerosos estudios han demostrado que este tipo de alimentación reduce el riesgo de sufrir enfermedades del corazón y ayuda a vivir más años. Pero la dieta mediterránea no consiste solo en qué comemos, sino también en cómo lo hacemos: compartir la mesa con la familia y los amigos, sin prisa, forma parte esencial de esta tradición.',
+    glossary: [ ['el patrimonio', '遗产'], ['de temporada', '当季的'], ['la legumbre', '豆类'], ['reservarse para', '留待/用于'], ['el riesgo', '风险'], ['compartir', '分享'] ],
+    questions: [
+      { q: '¿Qué es la dieta mediterránea según el texto?', opts: ['Un estilo de vida y patrimonio cultural', 'Una moda pasajera', 'Un tipo de restaurante'], a: 'Un estilo de vida y patrimonio cultural' },
+      { q: '¿En qué se basa principalmente?', opts: ['En productos frescos y aceite de oliva', 'En carne roja y dulces', 'En comida rápida'], a: 'En productos frescos y aceite de oliva' },
+      { q: '¿Qué han demostrado numerosos estudios?', opts: ['Que reduce el riesgo de enfermedades del corazón', 'Que engorda mucho', 'Que es muy cara'], a: 'Que reduce el riesgo de enfermedades del corazón' },
+      { q: '¿Qué más forma parte de esta tradición?', opts: ['Compartir la mesa sin prisa', 'Comer siempre solo', 'Comer muy rápido'], a: 'Compartir la mesa sin prisa' },
+    ],
+  },
+  {
+    id: 'r20', book: 4, title: 'El arte de Frida Kahlo', titleZh: '弗里达·卡罗的艺术',
+    text: 'Frida Kahlo es probablemente la pintora mexicana más famosa del mundo. Su vida estuvo marcada por el dolor: de niña sufrió una enfermedad y, siendo joven, tuvo un grave accidente que la obligó a pasar largos periodos en cama. Fue precisamente entonces cuando empezó a pintar. Gran parte de su obra son autorretratos en los que refleja sus sentimientos, su cultura y el sufrimiento físico que soportó durante toda su vida. Frida se inspiró en las tradiciones populares de México y utilizó colores intensos y símbolos llenos de significado. Aunque en vida no fue tan reconocida como su marido, el pintor Diego Rivera, con el tiempo se ha convertido en un icono del arte y en un símbolo de fuerza para muchas mujeres.',
+    glossary: [ ['la pintora', '女画家'], ['estar marcado por', '被…深深影响'], ['el autorretrato', '自画像'], ['reflejar', '反映'], ['soportar', '忍受'], ['el icono', '标志/偶像'] ],
+    questions: [
+      { q: '¿Cuándo empezó Frida Kahlo a pintar?', opts: ['Después de un grave accidente', 'De muy niña en la escuela', 'Al casarse con Diego Rivera'], a: 'Después de un grave accidente' },
+      { q: '¿Qué representan gran parte de sus obras?', opts: ['Autorretratos que reflejan sus sentimientos', 'Paisajes de Europa', 'Escenas históricas'], a: 'Autorretratos que reflejan sus sentimientos' },
+      { q: '¿En qué se inspiró?', opts: ['En las tradiciones populares de México', 'En el arte japonés', 'En la fotografía moderna'], a: 'En las tradiciones populares de México' },
+      { q: '¿En qué se ha convertido con el tiempo?', opts: ['En un icono del arte y símbolo de fuerza', 'En una pintora olvidada', 'En una actriz famosa'], a: 'En un icono del arte y símbolo de fuerza' },
+    ],
+  },
+  {
+    id: 'r21', book: 4, title: 'El cine de Almodóvar', titleZh: '阿尔莫多瓦的电影',
+    text: 'Pedro Almodóvar es el director de cine español más conocido internacionalmente. Nació en un pueblo de la región de La Mancha en 1949 y, desde muy joven, sintió pasión por el cine. Sus películas se caracterizan por los colores vivos, las historias llenas de emoción y unos personajes femeninos fuertes e inolvidables. En sus obras mezcla el humor y el drama con una libertad que sorprendió al público cuando empezó a rodar. Títulos como Mujeres al borde de un ataque de nervios o Todo sobre mi madre han ganado premios en todo el mundo, incluidos dos Óscar. Gracias a él, el cine español es hoy más conocido fuera de sus fronteras, y muchos jóvenes directores lo consideran un maestro.',
+    glossary: [ ['el director', '导演'], ['sentir pasión por', '热爱/热衷于'], ['los colores vivos', '鲜艳的色彩'], ['el personaje', '人物/角色'], ['rodar', '拍摄（电影）'], ['la frontera', '边境/国界'] ],
+    questions: [
+      { q: '¿De dónde es Pedro Almodóvar?', opts: ['De un pueblo de La Mancha', 'De Madrid', 'De Andalucía'], a: 'De un pueblo de La Mancha' },
+      { q: '¿Cómo son sus películas?', opts: ['De colores vivos y con personajes femeninos fuertes', 'En blanco y negro y silenciosas', 'Cortas y sin historia'], a: 'De colores vivos y con personajes femeninos fuertes' },
+      { q: '¿Qué mezcla en sus obras?', opts: ['El humor y el drama', 'La ciencia y la política', 'El deporte y la música'], a: 'El humor y el drama' },
+      { q: '¿Cuántos Óscar se mencionan?', opts: ['Dos', 'Ninguno', 'Cinco'], a: 'Dos' },
+    ],
+  },
+  {
+    id: 'r22', book: 4, title: 'El flamenco', titleZh: '弗拉门戈',
+    text: 'El flamenco es una de las expresiones artísticas más representativas de España, especialmente de Andalucía, en el sur del país. Nació hace siglos de la mezcla de diferentes culturas y hoy es conocido en el mundo entero. El flamenco no es solo un baile: combina el cante, la guitarra y el baile en un mismo espectáculo lleno de fuerza y sentimiento. Los artistas expresan a través de él tanto la alegría como el dolor. En 2010, la Unesco lo declaró patrimonio cultural inmaterial de la humanidad. Aprender a bailar flamenco requiere años de práctica, pero cualquier persona puede disfrutar de su ritmo y su pasión al escucharlo por primera vez.',
+    glossary: [ ['la expresión artística', '艺术表现形式'], ['el cante', '（弗拉门戈的）歌唱'], ['el espectáculo', '演出/表演'], ['a través de', '通过/借由'], ['declarar', '宣布/认定'], ['el ritmo', '节奏'] ],
+    questions: [
+      { q: '¿De qué región es especialmente representativo el flamenco?', opts: ['De Andalucía', 'De Cataluña', 'De Galicia'], a: 'De Andalucía' },
+      { q: '¿Qué combina el flamenco?', opts: ['El cante, la guitarra y el baile', 'El cine y la pintura', 'La cocina y el vino'], a: 'El cante, la guitarra y el baile' },
+      { q: '¿Qué hizo la Unesco en 2010?', opts: ['Lo declaró patrimonio de la humanidad', 'Lo prohibió', 'Lo inventó'], a: 'Lo declaró patrimonio de la humanidad' },
+      { q: '¿Qué requiere aprender a bailar flamenco?', opts: ['Años de práctica', 'Solo un día', 'Ningún esfuerzo'], a: 'Años de práctica' },
+    ],
+  },
+  {
+    id: 'r23', book: 4, title: 'La geografía de América Latina', titleZh: '拉丁美洲地理',
+    text: 'América Latina es una región enorme y muy variada que se extiende desde México hasta el sur de Argentina y Chile. En ella se encuentran algunos de los paisajes más impresionantes del planeta. La cordillera de los Andes, la más larga del mundo, recorre el continente de norte a sur. En Brasil está la selva amazónica, considerada el pulmón verde de la Tierra por la enorme cantidad de oxígeno que produce. También hay desiertos, como el de Atacama, uno de los lugares más secos del mundo. La mayoría de los países hablan español, aunque en Brasil se habla portugués. Esta diversidad geográfica y cultural convierte a América Latina en una región fascinante para viajeros y científicos.',
+    glossary: [ ['la región', '地区'], ['extenderse', '延伸'], ['la cordillera', '山脉'], ['la selva', '丛林/雨林'], ['el desierto', '沙漠'], ['la diversidad', '多样性'] ],
+    questions: [
+      { q: '¿Desde dónde hasta dónde se extiende América Latina?', opts: ['Desde México hasta el sur de Argentina y Chile', 'Desde España hasta Brasil', 'Solo por Centroamérica'], a: 'Desde México hasta el sur de Argentina y Chile' },
+      { q: '¿Cuál es la cordillera más larga del mundo?', opts: ['Los Andes', 'Los Pirineos', 'Los Alpes'], a: 'Los Andes' },
+      { q: '¿Por qué se llama a la selva amazónica el pulmón verde?', opts: ['Por la enorme cantidad de oxígeno que produce', 'Porque es de color verde', 'Porque allí no vive nadie'], a: 'Por la enorme cantidad de oxígeno que produce' },
+      { q: '¿Qué lengua se habla en Brasil?', opts: ['Portugués', 'Español', 'Francés'], a: 'Portugués' },
+    ],
+  }
+);
+
 // 每篇短文对应的现西册课主题与语法练习点（原创配套，非教材原文）
 const READING_ALIGN = {
   r7:  '现西一册·自我介绍主题 ｜ 练：ser + 职业国籍、现在时',
@@ -319,10 +444,35 @@ const READING_ALIGN = {
   r5:  '现西三册·学习语言主题 ｜ 练：无人称 se、para + 原形',
   r12: '现西三册·留学与人生主题 ｜ 练：虚拟式让步（aunque haya…）、条件式',
   r6:  '现西三册·环境保护主题 ｜ 练：deber、条件句、社会议题词汇',
+  r13: '现西三册·社交与观点主题 ｜ 练：现在完成时、虚拟式（es fundamental que…）',
+  r14: '现西三册·生活方式主题 ｜ 练：tan… como 比较、虚拟式建议句',
+  r15: '进阶·社会文化主题 ｜ 练：过去未完成时描写、no obstante 转折',
+  r16: '进阶·文学人物主题 ｜ 练：简单过去时叙事、定语从句',
+  r17: '进阶·文化历史主题 ｜ 练：aunque/ya que 从句、长句阅读',
+  r18: '进阶·科技伦理主题 ｜ 练：将来时、虚拟式（es necesario que…）',
+  r19: '进阶·饮食健康主题 ｜ 练：无人称/被动 se、no… sino…',
+  r20: '进阶·艺术传记主题 ｜ 练：简单过去时 vs 过去未完成时、定语从句',
+  r21: '进阶·西语电影主题 ｜ 练：简单过去时叙事、定语从句、被动含义',
+  r22: '进阶·音乐舞蹈主题 ｜ 练：no solo… sino…、tanto… como…',
+  r23: '进阶·拉美地理主题 ｜ 练：无人称 se、最高级、长句阅读',
 };
 READINGS.forEach(r => { if (READING_ALIGN[r.id]) r.align = READING_ALIGN[r.id]; });
+
+// 进阶篇整篇中文对照译文（原创配套翻译）
+const READING_TEXT_ZH = {
+  r15: '午睡是西班牙最广为人知的习俗之一，尽管如今它已不像许多人以为的那样普遍。传统上，午饭后工人们会休息一会儿，以避开一天中最热的时段，尤其是在夏天和西班牙南部。这段大约二十分钟的短暂休息，有助于恢复体力、应对余下的工作时间。然而，随着现代生活节奏和工作时间的变化，越来越少的西班牙人能在工作日睡上午觉。不过，一些科学家认为，短暂的午睡能改善记忆力和注意力。因此，许多国家已开始为员工设立可在工作时间休息的空间。',
+  r16: '加夫列尔·加西亚·马尔克斯，哥伦比亚作家，1927 年出生，是西班牙语文学中最重要的作家之一。他最著名的作品《百年孤独》讲述了布恩迪亚家族在一个名叫马孔多的虚构小镇中数代人的故事。在他的小说里，日常事件与奇幻元素以极其自然的方式交织在一起，以至于读者毫不惊讶地接受了它们。这种被称为魔幻现实主义的风格，影响了世界各地无数作家。1982 年，他获得了诺贝尔文学奖。尽管他于 2014 年去世，他的作品仍在被人们阅读，并被翻译成数十种语言，他的名字至今仍是拉丁美洲文化的象征。',
+  r17: '每年，来自世界各地的成千上万人走上圣地亚哥朝圣之路——一条条最终通往西班牙西北部圣地亚哥-德孔波斯特拉城的路线网络。虽然它起源于宗教，因为数个世纪以来朝圣者步行前往瞻仰使徒圣地亚哥的陵墓，但今天人们出于各种各样的原因走这条路。有人寻求一种精神体验，有人想亲近自然，也有人只是想考验自己的体力。最热门的路线——法国之路，全长约八百公里，用一个多月即可走完。沿途，行者们会遇见许多村庄、风景，以及一种令他们难以忘怀的热情好客。',
+  r18: '人工智能已不再是科幻电影里的专属之物，而成了我们日常生活的现实。如今我们常常在不知不觉中使用它——当手机识别我们的声音，或某个应用为我们推荐一首歌时。它的可能性是巨大的：它可以帮助医生检测疾病、提升道路安全，或让不同语言之间的翻译更加便利。然而，它也提出了一些棘手的问题，关乎就业的未来，以及当一个系统出错时由谁负责。因此，许多专家坚持认为，必须有明确的监管，并且技术应始终服务于人。',
+  r19: '地中海饮食远不止是一种吃法：它是一种被联合国教科文组织列为人类文化遗产的生活方式。它以新鲜、当季的食物为基础，如水果、蔬菜、豆类、鱼，尤其是橄榄油。红肉和甜食则留待特殊场合。大量研究表明，这种饮食方式能降低罹患心脏病的风险，并有助于延年益寿。但地中海饮食不仅在于我们吃什么，也在于我们怎么吃：与家人和朋友从容地共享一餐，是这一传统不可或缺的一部分。',
+  r20: '弗里达·卡罗大概是世界上最著名的墨西哥女画家。她的一生都被痛苦所笼罩：幼年患过一场疾病，年轻时又遭遇一次严重车祸，使她不得不长期卧床。正是在那时，她开始作画。她的大部分作品是自画像，在其中映照出自己的情感、文化，以及她一生所忍受的身体痛苦。弗里达从墨西哥的民间传统中汲取灵感，运用浓烈的色彩和充满寓意的符号。尽管在世时她的声名不及丈夫——画家迭戈·里维拉，但随着时间推移，她已成为艺术的标志，也成为许多女性心中力量的象征。',
+  r21: '佩德罗·阿尔莫多瓦是国际上最知名的西班牙电影导演。他 1949 年出生在拉曼查地区的一个小镇，从很小的时候起就对电影充满热情。他的影片以鲜艳的色彩、饱含情感的故事，以及一个个坚强而令人难忘的女性角色为特色。在作品中，他以一种在他初执导筒时令观众惊讶的自由，将幽默与悲情融为一体。《濒临崩溃边缘的女人》《关于我母亲的一切》等片在世界各地屡获大奖，其中包括两座奥斯卡。多亏了他，西班牙电影如今在国门之外更为人所知，许多年轻导演都视他为大师。',
+  r22: '弗拉门戈是西班牙最具代表性的艺术表现形式之一，尤以该国南部的安达卢西亚为盛。它诞生于数百年前不同文化的交融，如今已闻名于全世界。弗拉门戈不只是一种舞蹈：它将歌唱、吉他与舞蹈融汇于同一场充满力量与情感的演出之中。艺术家借由它既表达欢乐，也表达痛苦。2010 年，联合国教科文组织将其列为人类非物质文化遗产。学会跳弗拉门戈需要多年的练习，但任何人在第一次聆听时，都能感受并享受它的节奏与激情。',
+  r23: '拉丁美洲是一片幅员辽阔、丰富多样的地区，从墨西哥一直延伸到阿根廷和智利的南端。这里拥有地球上一些最令人叹为观止的景观。安第斯山脉——世界上最长的山脉，自北向南纵贯整个大陆。巴西境内有亚马孙雨林，因其产生的巨量氧气而被视为地球的绿色之肺。这里也有沙漠，比如阿塔卡马沙漠，是世界上最干旱的地方之一。大多数国家讲西班牙语，不过巴西讲葡萄牙语。这种地理与文化上的多样性，使拉丁美洲成为旅行者和科学家眼中一片引人入胜的土地。',
+};
+READINGS.forEach(r => { if (READING_TEXT_ZH[r.id]) r.textZh = READING_TEXT_ZH[r.id]; });
 // 按册与主题顺序重排，阅读列表更贴合教材推进
-const READING_ORDER = ['r7', 'r1', 'r8', 'r2', 'r9', 'r3', 'r10', 'r4', 'r11', 'r5', 'r12', 'r6'];
+const READING_ORDER = ['r7', 'r1', 'r8', 'r2', 'r9', 'r3', 'r10', 'r4', 'r11', 'r5', 'r12', 'r6', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23'];
 READINGS.sort((a, b) => READING_ORDER.indexOf(a.id) - READING_ORDER.indexOf(b.id));
 
 // ---------- #6 扩充语法题库（为各课补充题目；通关时从题池随机抽 3 道） ----------
