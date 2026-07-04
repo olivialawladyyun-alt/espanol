@@ -259,6 +259,32 @@ function shuffle(arr) {
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
+// 把文本安全嵌入 内联 onclick 的单引号 JS 字符串（先转义反斜杠/单引号，再做 HTML 属性转义）
+function jsAttr(s) {
+  return String(s)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/\r?\n/g, ' ')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+// 阅读生词高亮：在原始文本上分段处理，转义非匹配段、把生词包成可点击（高亮全部出现，长词优先，Unicode 词边界）
+function glossHighlight(text, glossary) {
+  if (!glossary || !glossary.length) return esc(text);
+  const words = glossary.map(g => g[0]).filter(Boolean).sort((a, b) => b.length - a.length);
+  const pat = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  let re;
+  try { re = new RegExp('(?<![\\p{L}\\p{M}])(' + pat + ')(?![\\p{L}\\p{M}])', 'giu'); }
+  catch (e) { re = new RegExp('(' + pat + ')', 'gi'); } // 兼容不支持后行断言的旧引擎
+  let out = '', last = 0, m;
+  while ((m = re.exec(text)) !== null) {
+    out += esc(text.slice(last, m.index));
+    out += `<span class="gloss" onclick="speak('${jsAttr(m[0])}')">${esc(m[0])}</span>`;
+    last = m.index + m[0].length;
+    if (re.lastIndex === m.index) re.lastIndex++;
+  }
+  out += esc(text.slice(last));
+  return out;
+}
 function normalizeEs(s) {
   // 去重音，但保留 U+0303（ñ 的波浪线）
   return s.toLowerCase()
@@ -1862,16 +1888,12 @@ function renderReadingDetail() {
   const r = READINGS.find(x => x.id === readingId);
   const el = document.getElementById('tab-read');
   // 点词高亮：把生词包成可点击
-  let html = esc(r.text);
-  r.glossary.forEach(([w]) => {
-    const re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'i');
-    html = html.replace(re, `<span class="gloss" onclick="speak('${esc(w)}')">$1</span>`);
-  });
+  const html = glossHighlight(r.text, r.glossary);
   el.innerHTML = `
     <span class="back-link" onclick="readingId=null;renderRead()">← 返回阅读列表</span>
     <div class="card">
       <h2>${esc(r.title)} <span class="muted" style="font-weight:400;font-size:0.9rem">${esc(r.titleZh)}</span>
-        <button class="speak-btn" onclick="speak('${esc(r.text)}')">🔊</button></h2>
+        <button class="speak-btn" onclick="speak('${jsAttr(r.text)}')">🔊</button></h2>
       ${r.align ? `<p class="muted" style="font-size:0.82rem;margin-top:4px">📎 ${esc(r.align)}</p>` : ''}
       <p style="font-size:1.05rem;line-height:2;margin-top:10px">${html}</p>
       ${r.textZh ? `
@@ -1880,7 +1902,7 @@ function renderReadingDetail() {
       <h3>📒 生词</h3>
       ${r.glossary.map(([w, zh]) => `
         <div class="example-row">
-          <button class="speak-btn" onclick="speak('${esc(w)}')">🔊</button>
+          <button class="speak-btn" onclick="speak('${jsAttr(w)}')">🔊</button>
           <span class="es">${esc(w)}</span><span class="zh">${esc(zh)}</span>
         </div>`).join('')}
     </div>

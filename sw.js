@@ -1,5 +1,5 @@
 // Service Worker：离线可用 + 更新优先（network-first）
-const CACHE = 'espanol-v12';
+const CACHE = 'espanol-v13';
 const ASSETS = [
   './', './index.html', './css/style.css',
   './js/data.js', './js/data2.js', './js/data3.js', './js/data4.js', './js/data5.js', './js/app.js',
