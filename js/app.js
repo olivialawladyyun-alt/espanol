@@ -2016,7 +2016,7 @@ function renderPet() {
           <p style="font-size:0.88rem;margin:10px 0 6px">💛 心情 ${p.mood}/100</p>
           <div class="bar"><div style="width:${p.mood}%"></div></div>
           <p style="font-size:0.88rem;margin:10px 0 6px">🌱 成长值 ${p.growth}${next ? ` / 下一阶段「${next.name}」还差 ${next.g - p.growth}` : '（已满级！）'}</p>
-          <div class="bar" style="background:#e8e0f5"><div style="width:${growPct}%;background:linear-gradient(90deg,#b39ddb,#7e57c2)"></div></div>
+          <div class="bar" style="background:#e0d2bc"><div style="width:${growPct}%;background:#2c4a63"></div></div>
         </div>
         <div style="margin-top:14px">
           <button class="btn yellow" onclick="patPet()" ${patsLeft ? '' : 'disabled'}>🤚 摸摸头（今日剩 ${patsLeft} 次）</button>
