@@ -2089,12 +2089,13 @@ function useItem(id) {
   const stageAfter = petStage(p.growth).cur;
   toast(`${it.icon} ${p.name}：${it.say}`);
   speak(it.say);
-  if (stageAfter.g > stageBefore.g) {
+  const leveledUp = stageAfter.g > stageBefore.g;
+  if (leveledUp) {
     toast(`🎉 ${p.name} 成长为「${stageAfter.emoji} ${stageAfter.name}」！`, true);
   }
   checkAchievements();
   saveState();
-  showPetAction(it.type === 'snack' ? 'eat' : 'play');
+  showPetAction(leveledUp ? 'lvlup' : (it.type === 'snack' ? 'eat' : 'play'));
 }
 
 function patPet() {
