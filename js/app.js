@@ -1954,6 +1954,11 @@ function showPetAction(name) {
   petActionTimer = setTimeout(() => { petAction = null; renderPet(); }, 1600);
 }
 function togglePetSide() { petSide = !petSide; renderPet(); }
+function greetPet() {
+  if (petAction) return;
+  speak('¡Hola!');
+  showPetAction('hola');
+}
 
 function petStage(g) {
   let cur = PET_STAGES[0], next = null;
@@ -2007,9 +2012,10 @@ function renderPet() {
   el.innerHTML = `
     <div class="hero">
       <div class="card" style="text-align:center">
-        <div class="pet-stage-view">${petVisual(cur)}</div>
+        <div class="pet-stage-view" onclick="greetPet()" title="点我打个招呼" style="cursor:pointer">${petVisual(cur)}</div>
         <div style="margin:4px 0">
           <button class="btn small secondary" onclick="togglePetSide()">${petSide ? '↩️ 看正面' : '🔄 看侧面'}</button>
+          <span class="muted" style="font-size:0.78rem;margin-left:6px">👆 点羊驼打招呼</span>
         </div>
         <h2 style="margin-top:6px">${esc(p.name)} · ${cur.name}
           <button class="btn small secondary" onclick="renamePet()">✏️ 改名</button>
